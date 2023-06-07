@@ -1,0 +1,6 @@
+Run
+Jog
+Skip
+Diet
+SkyDive
+SURF
