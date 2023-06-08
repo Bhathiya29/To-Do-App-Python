@@ -1,7 +1,6 @@
 # CLI To-Do APP
 #from functions_of_todo import getTodos, writeTodos
 
-from modules import functions_of_todo
 import time
 
 print('-------------------------------------- To-Do APP -----------------------------------------')
