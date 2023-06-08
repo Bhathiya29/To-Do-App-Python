@@ -4,3 +4,5 @@ Skip
 Diet
 SkyDive
 SURF
+Sleep
+Drink Water
