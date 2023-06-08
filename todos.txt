@@ -1,8 +1,5 @@
-Run
-Jog
-Skip
-Diet
+Karate
 SkyDive
 SURF
-Sleep
+SleepT
 Drink Water
