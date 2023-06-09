@@ -1,4 +1,3 @@
-Karate
 SkyDive
 SURF
 SleepT

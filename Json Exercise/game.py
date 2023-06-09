@@ -3,8 +3,11 @@ import json
 with open('questions.json', 'r') as file:
     content = file.read()
 
+print(type(content))
+print(content)
 data = json.loads(content)
-
+print(type(data))
+print(data)
 
 for question in data:
     print(question['question_text'])
