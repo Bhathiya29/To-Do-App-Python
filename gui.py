@@ -1,11 +1,18 @@
 import functions_of_todo
 import PySimpleGUI
+import os
+
+if not os.path.exists('todos.txt'):
+    with open('todos.txt','w') as file:
+        pass
+
+PySimpleGUI.theme('Black')
 
 label = PySimpleGUI.Text('Type in a To-Do')
 input_box = PySimpleGUI.InputText(tooltip='Enter To-Do',
                                   key='todos',
                                   enable_events=True,
-                                  size=[25,10])
+                                  size=[45,10])
 
 edit_button=PySimpleGUI.Button('Edit')
 add_button = PySimpleGUI.Button('Add')
@@ -30,14 +37,19 @@ while True:
             functions_of_todo.writeTodos(todo)
     
         case 'Edit':
-            todo_to_edit=values['todo'][0]
-            new_todo=values['todos']+'\n'
 
-            todos=functions_of_todo.getTodos()
-            index=todos.index(todo_to_edit)
-            todos[index]=new_todo
-            functions_of_todo.writeTodos(todos)
-            #window['todos'].update(values='todo')
+            try:
+                todo_to_edit=values['todo'][0]
+                new_todo=values['todos']+'\n'
+
+                todos=functions_of_todo.getTodos()
+                index=todos.index(todo_to_edit)
+                todos[index]=new_todo
+                functions_of_todo.writeTodos(todos)
+                #window['todos'].update(values='todo')
+            except IndexError:
+                PySimpleGUI.popup('Please Select an item to edit')
+
 
         case 'Complete':
             todo_to_complete=values['todo'][0]
