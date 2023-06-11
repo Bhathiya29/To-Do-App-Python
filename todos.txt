@@ -1,7 +1,5 @@
-SkyDive
 SURF
 Sleep
 Drink Water
-cycling
-Hiking
-Fix the rice-cooker
+Code for 1h
+
